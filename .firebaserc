@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "spaceflight-f6d07": {
+      "hosting": {
+        "app": [
+          "spaceflight-f6d07"
+        ]
+      }
+    }
+  }
+}

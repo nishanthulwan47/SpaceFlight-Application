@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="login"></ion-back-button>
+</ion-buttons>
+  <ion-toolbar>
+    <ion-title class="styling-header">Spaceflight Launches</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+    <ion-card (click) = "getDetail(item.id)"  *ngFor="let item of articles">
+        <img class="myimg" src = {{item.rocket.imageURL}}/>
+        <ion-card-header>
+          <ion-card-subtitle>{{item.name}}</ion-card-subtitle>
+          <ion-card-title>{{item.windowstart}}</ion-card-title>
+
+          <ion-card-subtitle>{{item.location.name}}</ion-card-subtitle>
+          
+        </ion-card-header>
+        <ion-card-content *ngIf="item.missions[0]">
+          {{item.missions[0].description}}
+         
+        </ion-card-content>
+       
+     
+    </ion-card>
+
+
+
+</ion-content>

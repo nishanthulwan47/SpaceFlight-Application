@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="header">Spaceflight details</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button [defaultHref]=""></ion-back-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+<ion-card-title *ngIf="this.data">  
+<img class="myImg" [src]="this.data.rocket.imageURL" alt="">
+</ion-card-title>
+<ion-card-title *ngIf="this.data">
+  {{this.data.name}}
+</ion-card-title>
+<ion-card-title *ngIf="this.data">
+{{this.data.windowstart}}
+</ion-card-title>
+  </ion-card>
+</ion-content>

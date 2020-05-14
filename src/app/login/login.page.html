@@ -1,0 +1,34 @@
+<ion-content class="image">
+  <ion-header>
+    <ion-buttons slot="start">
+      <ion-back-button [defaultHref]=""></ion-back-button>
+  </ion-buttons>
+    <ion-toolbar>
+      <ion-title class="color">
+        Login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+<ion-list>
+
+    <ion-item>
+      
+      <ion-label class="user" position="floating">Email</ion-label>
+      <ion-input type="text" [(ngModel)]="email"></ion-input>
+
+    </ion-item>
+
+    <ion-item>
+
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+
+    </ion-item>
+
+</ion-list>
+  <div class="button-style">
+  <ion-button color="dark" fill="solid" (click)="Login()">Login</ion-button>
+
+  <ion-button color="dark" fill="solid" routerLink="/register">Signup</ion-button>
+    </div>
+</ion-content>
